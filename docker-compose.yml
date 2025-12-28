@@ -15,7 +15,7 @@ services:
 
   zookeeper:
     container_name: zookeeper
-    image: "docker.io/bitnami/zookeeper:3"
+    image: zookeeper:3.9
     ports:
       - "2181:2181"
     volumes:
@@ -25,7 +25,7 @@ services:
 
   kafka:
     container_name: kafka
-    image: "docker.io/bitnami/kafka:2-debian-10"
+    image: confluentinc/cp-kafka:7.5.0
     ports:
       - "9092:9092"
     expose:
